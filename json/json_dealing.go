@@ -4,20 +4,32 @@ import (
 	"encoding/json"
 )
 
+type Users struct {
+	Users []User `json:"users"`
+}
+
 type User struct {
 	Name        string  `json:"name"`
 	Age         int     `json:"age"`
 	Nationality string  `json:"nationality"`
 	Wallet      float32 `json:"wallet"`
 	Currency    string  `json:"currency"`
-	// CreatedAt   time.Time `json:"createdAt"`
+}
+
+func ParseUser(response string) (User, error) {
+	var user User
+	if err := json.Unmarshal([]byte(response), &user); err != nil {
+		return User{}, err
+	}
+
+	return user, nil
 }
 
 func ParseUsers(response string) ([]User, error) {
-	var users []User
+	var users Users
 	if err := json.Unmarshal([]byte(response), &users); err != nil {
 		return nil, err
 	}
 
-	return users, nil
+	return users.Users, nil
 }

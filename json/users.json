@@ -2,17 +2,17 @@
   "users": [
     {
       "name": "Louis",
-      "age": "19",
+      "age": 19,
       "nationality": "German",
-      "wallet": "3526.3",
+      "wallet": 3526.3,
       "currency": "EUR",
       "createdAt": "2021-10-18T11:08:47.577Z"
     },
     {
       "name": "Mark",
-      "age": "21",
+      "age": 21,
       "nationality": "Russian",
-      "wallet": "126097.4",
+      "wallet": 126097.4,
       "currency": "RUB",
       "createdAt": "2021-10-18T11:08:47.577Z"
     },
@@ -20,31 +20,31 @@
       "name": "Sophie",
       "age": null,
       "nationality": "Australian",
-      "wallet": "2278",
+      "wallet": 2278,
       "currency": "AUD",
       "createdAt": "2021-10-18T11:08:47.577Z"
     },
     {
       "name": "Greg",
-      "age": "54",
+      "age": 54,
       "nationality": null,
-      "wallet": "3800576",
+      "wallet": 3800576,
       "currency": "USD",
       "createdAt": "2021-10-18T11:08:47.577Z"
     },
     {
       "name": "Aishah",
-      "age": "27",
+      "age": 27,
       "nationality": "Malaysian",
-      "wallet": "13986.8",
+      "wallet": 13986.8,
       "currency": "MYR",
       "createdAt": "2021-10-18T11:08:47.577Z"
     },
     {
       "name": "泉",
-      "age": "23",
+      "age": 23,
       "nationality": "Japanese",
-      "wallet": "129769",
+      "wallet": 129769,
       "currency": "YEN",
       "createdAt": "2021-10-18T11:08:47.577Z"
     }
