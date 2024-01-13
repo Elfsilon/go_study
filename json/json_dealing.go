@@ -16,18 +16,18 @@ type User struct {
 	Currency    string  `json:"currency"`
 }
 
-func ParseUser(response string) (User, error) {
+func ParseUser(data []byte) (User, error) {
 	var user User
-	if err := json.Unmarshal([]byte(response), &user); err != nil {
+	if err := json.Unmarshal(data, &user); err != nil {
 		return User{}, err
 	}
 
 	return user, nil
 }
 
-func ParseUsers(response string) ([]User, error) {
+func ParseUsers(data []byte) ([]User, error) {
 	var users Users
-	if err := json.Unmarshal([]byte(response), &users); err != nil {
+	if err := json.Unmarshal(data, &users); err != nil {
 		return nil, err
 	}
 
