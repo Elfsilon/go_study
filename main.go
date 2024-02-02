@@ -1,7 +1,11 @@
 package main
 
-import "go_study/basics"
+import (
+	"fmt"
+	"go_study/leetcode"
+)
 
 func main() {
-	basics.Main()
+	res := leetcode.ReverseInt(-123)
+	fmt.Println(res)
 }
