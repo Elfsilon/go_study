@@ -1,8 +1,9 @@
 package main
 
 import (
+	"fmt"
 	srtv "go_study/sort_visualizer"
-	"math/rand"
+	standartproblems "go_study/standart_problems"
 )
 
 type BubbleSort struct{}
@@ -43,13 +44,16 @@ func main() {
 	// fmt.Println(leetcode.BuddyStrings("agbt", "agbt"))     // False
 	// fmt.Println(leetcode.BuddyStrings("abab", "baba"))     // Must be false! - duplicates is not the antidote
 
-	bubble := BubbleSort{}
-	visualizer := srtv.NewVisualizer(&bubble)
+	// bubble := BubbleSort{}
+	// visualizer := srtv.NewVisualizer(&bubble)
 
-	input := make([]int, 0)
-	for i := 16; i > 0; i -= 1 {
-		input = append(input, rand.Intn(100))
-	}
+	// input := make([]int, 0)
+	// for i := 16; i > 0; i -= 1 {
+	// 	input = append(input, rand.Intn(100))
+	// }
 
-	visualizer.Play(input)
+	// visualizer.Play(input)
+
+	res := standartproblems.HasDuplicateParenthesis("((a+b))")
+	fmt.Println(res)
 }
