@@ -86,3 +86,58 @@ func InsertionSort(arr []int) *v.Snapshotter {
 
 	return snapshotter
 }
+
+func QuickSort(arr []int) *v.Snapshotter {
+	snapshotter := v.NewSnapshotter()
+	iter := 0
+	quickSortR(arr, arr, snapshotter, &iter)
+	return snapshotter
+}
+
+func quickSortR(original []int, arr []int, snapshotter *v.Snapshotter, iter *int) {
+	(*iter) += 1
+	l := len(arr)
+
+	if l == 2 {
+		if arr[0] >= arr[1] {
+			swap(arr, 0, 1)
+		}
+	} else if l > 1 {
+		i, j := 0, l-1
+		pivotIndex := (l + 1) / 2
+		pivot, p := arr[pivotIndex], -1
+
+		for p < 0 {
+			for ; arr[i] < pivot; i++ {
+				snapshot := v.NewSnapshot((*iter), original, i, j, pivotIndex)
+				snapshot.SetDescription(fmt.Sprintf("pivot = %v, p = %v", pivot, p))
+				snapshotter.CaptureSnapshot(snapshot)
+			}
+			for ; arr[j] > pivot; j-- {
+				snapshot := v.NewSnapshot((*iter), original, i, j, pivotIndex)
+				snapshot.SetDescription(fmt.Sprintf("mid = %v, p = %v", pivot, p))
+				snapshotter.CaptureSnapshot(snapshot)
+			}
+
+			if i >= j {
+				p = j
+			} else {
+				snapshot := v.NewSnapshot((*iter), original, i, j, pivotIndex)
+				snapshot.SetDescription(fmt.Sprintf("mid = %v, p = %v", pivot, p))
+				snapshotter.CaptureSnapshot(snapshot)
+
+				swap(arr, i, j)
+
+				snapshot = v.NewSnapshot((*iter), original, i, j, pivotIndex)
+				snapshot.SetDescription(fmt.Sprintf("mid = %v, p = %v", pivot, p))
+				snapshotter.CaptureSnapshot(snapshot)
+
+				i++
+				j--
+			}
+		}
+
+		quickSortR(original, arr[:p], snapshotter, iter)
+		quickSortR(original, arr[p:], snapshotter, iter)
+	}
+}
