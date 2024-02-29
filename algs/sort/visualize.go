@@ -1,7 +1,7 @@
 package sort
 
 import (
-	v "go_study/sort_visualizer"
+	v "go_study/visualizer"
 	"math/rand"
 )
 

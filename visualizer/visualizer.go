@@ -1,4 +1,4 @@
-package sortvisualizer
+package visualizer
 
 import (
 	"fmt"
@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// TODO: Make work with any alg, not only with sorts
 type Visualizable func(arr []int) *Snapshotter
 
 type Visualizer struct {

@@ -2,7 +2,7 @@ package sort
 
 import (
 	"fmt"
-	v "go_study/sort_visualizer"
+	v "go_study/visualizer"
 )
 
 func swap(arr []int, i, j int) {

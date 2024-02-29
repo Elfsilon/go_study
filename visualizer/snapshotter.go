@@ -1,4 +1,4 @@
-package sortvisualizer
+package visualizer
 
 type Snapshotter struct {
 	snapshots []Snapshot

@@ -1,4 +1,4 @@
-package sortvisualizer
+package visualizer
 
 import (
 	"os"
