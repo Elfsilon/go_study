@@ -15,5 +15,5 @@ func main() {
 	// result := issue.CanJump([]int{2, 5, 0, 0}) // true
 	// result := issue.CanJump([]int{3, 0, 8, 2, 0, 0, 1}) // true
 
-	concurrency.Run()
+	concurrency.RunTweets()
 }

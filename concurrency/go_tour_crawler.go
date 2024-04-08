@@ -115,7 +115,7 @@ var fetcher = fakeFetcher{
 	},
 }
 
-func Run() {
+func RunCrawler() {
 	wg := sync.WaitGroup{}
 	m := sync.Mutex{}
 
