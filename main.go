@@ -1,8 +1,6 @@
 package main
 
-import (
-	"go_study/concurrency"
-)
+import "go_study/concurrency"
 
 func main() {
 	// sort.VisualizeSort(sort.QuickSort)
