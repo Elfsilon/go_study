@@ -1,6 +1,9 @@
 package main
 
-import "go_study/concurrency"
+import (
+	"fmt"
+	"go_study/leetcode"
+)
 
 func main() {
 	// sort.VisualizeSort(sort.QuickSort)
@@ -13,5 +16,10 @@ func main() {
 	// result := issue.CanJump([]int{2, 5, 0, 0}) // true
 	// result := issue.CanJump([]int{3, 0, 8, 2, 0, 0, 1}) // true
 
-	concurrency.RunTweets()
+	// concurrency.RunTweets()
+
+	issue := leetcode.Issue69{}
+	result := issue.MySqrt(9) // true
+
+	fmt.Println(result)
 }
